@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Mi Amor ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(to bottom, #ffd6e7, #fff0f5);
+    min-height:100vh;
+    font-family: 'Dancing Script', cursive;
+    overflow-x:hidden;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+h1{
+    font-size:4rem;
+    color:#d63384;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:1.5rem;
+    color:#8a4065;
+    margin-bottom:50px;
+}
+
+.letter{
+    background:rgba(255,255,255,0.85);
+    padding:40px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    line-height:2;
+    font-size:1.5rem;
+    color:#5c2b43;
+}
+
+button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    background:#d63384;
+    color:white;
+    font-size:1.2rem;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.hidden{
+    display:none;
+}
+
+.final-message{
+    margin-top:40px;
+    font-size:2rem;
+    color:#d63384;
+}
+
+.tulip{
+    position:fixed;
+    top:-50px;
+    font-size:35px;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Para Mi Amor ❤️</h1>
+
+<p class="subtitle">
+Un pequeño rincón del mundo creado solo para ti.
+</p>
+
+<div class="letter">
+
+Mi amor,
+
+Hoy no quería regalarte algo que pudiera guardarse en una caja.
+
+Quería regalarte algo que viviera entre las palabras,
+porque hay sentimientos que ningún objeto puede contener.
+
+Desde que llegaste a mi vida,
+los días tienen otro color,
+las noches otra calma
+y mi corazón otra melodía.
+
+Tu sonrisa es mi lugar favorito,
+tu voz mi canción preferida,
+y tus ojos el universo donde siempre quiero perderme.
+
+Gracias por existir.
+Gracias por ser tú.
+
+Y aunque la distancia nos separe algunas veces,
+mi cariño siempre encuentra el camino hacia ti.
+
+Hoy celebramos tu cumpleaños,
+pero quien recibe el regalo soy yo,
+porque tengo la suerte de conocerte.
+
+Feliz cumpleaños, mi amor.
+
+Con todo mi corazón ❤️
+
+</div>
+
+<button onclick="showMessage()">
+Haz clic aquí ❤️
+</button>
+
+<div id="message" class="hidden final-message">
+Te amo más de lo que las palabras pueden decir 🌷❤️
+</div>
+
+</div>
+
+<script>
+
+function showMessage(){
+    document.getElementById("message").classList.remove("hidden");
+}
+
+for(let i=0;i<25;i++){
+    let tulip=document.createElement("div");
+    tulip.classList.add("tulip");
+    tulip.innerHTML="🌷";
+    tulip.style.left=Math.random()*100+"vw";
+    tulip.style.animationDuration=(5+Math.random()*10)+"s";
+    tulip.style.opacity=Math.random();
+    document.body.appendChild(tulip);
+}
+
+</script>
+
+</body>
+</html>
